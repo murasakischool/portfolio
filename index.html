@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Name – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --gradient: linear-gradient(90deg, #00c6fb, #005bea, #ff7e5f, #feb47b);
+      --background: #181a1b;
+      --card-bg: rgba(255,255,255,0.025);
+      --border: rgba(255,255,255,0.08);
+      --glow: 0 0 8px #73fbd3, 0 0 16px #008cff;
+    }
+    body {
+      background: var(--background);
+      color: #fff;
+      min-height: 100vh;
+      font-family: 'SF Pro Display', 'Inter', 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      letter-spacing: 0.03em;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+    header {
+      text-align: center;
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+    .glow-text {
+      font-size: 3rem;
+      font-weight: 700;
+      background: var(--gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      filter: brightness(1.2);
+      text-shadow: var(--glow);
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+    .subtitle {
+      font-size: 1.4rem;
+      color: #ddd;
+      opacity: 0.8;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    section {
+      display: flex;
+      flex-direction: row;
+      gap: 64px;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px 32px;
+      min-width: 320px;
+      flex: 1 1 320px;
+      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.12);
+      margin-bottom: 24px;
+      transition: box-shadow 0.2s;
+      backdrop-filter: blur(8px);
+    }
+    .card h2 {
+      background: var(--gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 18px;
+      text-shadow: var(--glow);
+    }
+    .card p, .card ul {
+      color: #dbeafe;
+      font-size: 1.1rem;
+      margin: 0 0 10px 0;
+      line-height: 1.6;
+    }
+    .card ul {
+      padding-left: 20px;
+    }
+    .card:hover {
+      box-shadow: 0 12px 32px 0 rgba(0,195,255,0.18), 0 0 24px #1e90ff88;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      width: 100%;
+    }
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 20px 0 rgba(0,0,0,0.08);
+      transition: box-shadow 0.2s;
+      backdrop-filter: blur(6px);
+    }
+    .project-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .project-card p {
+      font-size: 1rem;
+      color: #c9d1d9;
+      margin-bottom: 0;
+    }
+    .project-card:hover {
+      box-shadow: 0 0 28px #00c6fb55;
+    }
+    footer {
+      text-align: center;
+      color: #bbb;
+      font-size: 1rem;
+      padding: 40px 0 24px 0;
+      opacity: 0.7;
+      letter-spacing: 0.02em;
+    }
+    @media (max-width: 900px) {
+      section {
+        flex-direction: column;
+        gap: 40px;
+      }
+      .container {
+        gap: 48px;
+        padding: 32px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="glow-text">Your Name</div>
+      <div class="subtitle">Creative Developer · Designer · Dreamer</div>
+    </header>
 
+    <section>
+      <div class="card">
+        <h2>About Me</h2>
+        <p>
+          Passionate developer blending creativity and technology to craft delightful user experiences. Inspired by Apple’s design principles—clarity, depth, and subtlety. Always eager to learn and explore new horizons.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML, CSS (modern, responsive, gradients, animations)</li>
+          <li>JavaScript, TypeScript</li>
+          <li>React, Vue, Svelte</li>
+          <li>UI/UX Design, Figma</li>
+          <li>Motion Design</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="card" style="flex:2;">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>A sleek, interactive portfolio inspired by Apple’s design with glowing gradients and smooth transitions.</p>
+          </div>
+          <div class="project-card">
+            <h3>Creative Gallery</h3>
+            <p>A web gallery showcasing generative art and creative coding experiments.</p>
+          </div>
+          <div class="project-card">
+            <h3>Mobile App UI Kit</h3>
+            <p>Reusable component kit for building beautiful, consistent mobile apps rapidly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>Contact</h2>
+        <p>
+          Let’s create something amazing together!<br>
+          <b>Email:</b> <a href="mailto:your@email.com" style="color:#00c6fb;text-decoration:none;">your@email.com</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Your Name &ndash; Designed with inspiration from Apple.
+    </footer>
+  </div>
+</body>
+</html>
